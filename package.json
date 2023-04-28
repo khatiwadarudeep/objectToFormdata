@@ -1,0 +1,11 @@
+{
+  "name": "objecttoformdata",
+  "version": "1.0.0",
+  "description": "convert object to form-data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@rudeep",
+  "license": "ISC"
+}
