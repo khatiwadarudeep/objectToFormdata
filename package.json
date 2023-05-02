@@ -15,5 +15,12 @@
   },
   "dependencies": {
     "typescript": "^5.0.4"
-  }
+  },
+  "keywords": [
+    "form",
+    "formdata",
+    "object",
+    "array",
+    "object-to-formdata"
+  ]
 }
