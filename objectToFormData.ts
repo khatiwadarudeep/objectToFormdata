@@ -33,7 +33,7 @@ export function objectToFormData<T>(
       if (data instanceof File || data instanceof Blob) {
         formData.append(root, data);
       } else if (Array.isArray(data)) {
-        data.map((value, index) => {
+        data.map((value: any, index) => {
           appendFormData(value, `${root}[${index}]`);
         });
       } else if (typeof data === "object" && data) {
