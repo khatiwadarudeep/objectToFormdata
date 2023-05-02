@@ -1,6 +1,6 @@
 {
   "name": "objecttoformdataconverter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "convert object to form-data",
   "main": "./dist/index.js",
   "scripts": {
