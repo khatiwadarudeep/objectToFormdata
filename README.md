@@ -55,7 +55,7 @@ const newData = objectToFormData(data)
 The above code produces equivalent of: 
 
 ```
-const formdata = new FormData()
+const newData = new FormData()
 newData.append("name", "value")
 newData.append("address[0].city", "value")
 newData.append("address[1].city", "value")
