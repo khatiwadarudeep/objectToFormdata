@@ -17,41 +17,49 @@ $ pnpm install objecttoformdataconverter
 ```
 # Usage
 ### Usage with Objects containing nested object
-```
-import { objectToFormData } from "objecttoformdataconverter";
 
+Lets assume we have our data as 
+```
 const data = {
   name: 'biju',
   age: '20',
   address: {city:'dharan', state: 'koshi'}
 }
-
+```
+We can simply convert the provided data by doing
+```
+import { objectToFormData } from "objecttoformdataconverter";
 const convertedData = objectToFormData(data)
 ```
 The above code produces equivalent of:
 ```
-const formdata = new FormData()
-formdata.append("name", "value")
-formdata.append("age", "value")
-formdata.append("address.city", "value")
-formdata.append("address.state", "value")
+const convertedData = new FormData()
+convertedData.append("name", "value")
+convertedData.append("age", "value")
+convertedData.append("address.city", "value")
+convertedData.append("address.state", "value")
 ```
 ### Usage with Object containing array
+Lets assume we have our data as
 ```
-import { objectToFormData } from "objecttoformdataconverter";
-
 const data = {
   name: 'biju',
   address: [{city:'dharan'},{city:'kathmandu'}]
 }
-
+```
+We can simply convert the provided data by doing
+```
+import { objectToFormData } from "objecttoformdataconverter";
 const newData = objectToFormData(data)
 ```
 The above code produces equivalent of: 
 
 ```
 const formdata = new FormData()
-formdata.append("name", "value")
-formdata.append("address[0].city", "value")
-formdata.append("address[1].city", "value")
+newData.append("name", "value")
+newData.append("address[0].city", "value")
+newData.append("address[1].city", "value")
 ```
+
+
+
